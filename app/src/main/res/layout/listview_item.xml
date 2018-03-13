@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/owner_name"
+        android:layout_width="180dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/description"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/avatar"
+        android:layout_toRightOf="@+id/avatar"
+        android:layout_weight="1"
+        android:paddingTop="4dp"
+        android:text="TextView"
+        android:textColor="@android:color/black"
+        android:textStyle="italic"
+        tools:text="Owner name" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/nb_star"
+        android:layout_alignLeft="@+id/rep_name"
+        android:layout_alignRight="@+id/nb_star"
+        android:layout_alignStart="@+id/rep_name"
+        android:layout_below="@+id/rep_name"
+        android:text="Description"
+        android:textAppearance="@style/TextAppearance.Compat.Notification.Info" />
+
+    <TextView
+        android:id="@+id/rep_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/nb_star"
+        android:layout_alignLeft="@+id/avatar"
+        android:layout_alignRight="@+id/nb_star"
+        android:layout_alignStart="@+id/avatar"
+        android:width="@android:dimen/notification_large_icon_width"
+        android:fontFamily="sans-serif-condensed"
+        android:text="rep_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+        android:textSize="24sp"
+        tools:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/owner_name"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24dp"
+        android:layout_height="19dp"
+        android:layout_alignBottom="@+id/owner_name"
+        android:layout_alignTop="@+id/owner_name"
+        android:layout_toLeftOf="@+id/nb_star"
+        android:layout_toStartOf="@+id/nb_star"
+        android:layout_weight="1"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        app:srcCompat="@drawable/star" />
+
+    <TextView
+        android:id="@+id/nb_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/owner_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_weight="1"
+        android:paddingTop="5dp"
+        android:text="Nb star"
+        android:textColor="@android:color/black" />
+
+
+</RelativeLayout>
